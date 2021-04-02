@@ -3,7 +3,7 @@
 
 TEST(taskA, test1)
 {
-    Automata cof = Automata();
+    auto cof = Automata();
     cof.on();
     cof.coin(200);
     cof.finish();
@@ -14,7 +14,7 @@ TEST(taskA, test1)
 
 TEST(taskA, test2)
 {
-    Automata cof = Automata();
+    auto cof = Automata();
     cof.on();
     cof.choice(1);
     States result = cof.getState();
@@ -23,10 +23,10 @@ TEST(taskA, test2)
 
 TEST(taskA, test3)
 {
-    Automata cof = Automata();
+    auto cof = Automata();
     cof.on();
     cof.coin(150);
     cof.choice(0);
     int result = cof.finish();
-    EXPECT_EQ(10, result);
+    EXPECT_EQ(50, result);
 }
