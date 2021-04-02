@@ -1,4 +1,6 @@
 #include "Automata.h"
+#include <iostream>
+
 Automata::Automata()
 {
 	cash = 0;
@@ -35,8 +37,10 @@ void Automata::coin(int numb)
 std::vector<std::string>Automata::etMenu()
 {
 	std::vector<std::string> fullMenu;
-	for (int i = 0; i < menu.size(); i++)
-		fullMenu[i] = menu[i] + std::to_string(prices[i]);
+
+	for (int i = 0; i < menu.size(); i++) 
+		fullMenu.push_back(menu[i] + std::to_string(prices[i]));		
+	
 	return fullMenu;
 }
 bool Automata::check(int choise)
