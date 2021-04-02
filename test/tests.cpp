@@ -29,3 +29,4 @@ TEST(taskA, test3)
     cof.choice(0);
     int result = cof.finish();
     EXPECT_EQ(10, result);
+}
